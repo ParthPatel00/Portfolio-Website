@@ -154,6 +154,14 @@ html {
     
 }
 
+.home .home-content a i{
+    color: white;
+    transition: 0.4s ease;
+}
+
+.home .home-content a:hover i{
+    color: rgb(13, 158, 206);
+}
 /*Response media query start*/
 
 @media (max-width: 1300){ /*full screen*/
