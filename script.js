@@ -26,7 +26,8 @@ $(document).ready(function(){
 
     // backspace animation on homepage using script
     var typed = new Typed(".typing",{
-        strings: ["Data Science Analyst", "Machine Learning Developer", "Software Developer"],
+        //strings: ["Data Science Analyst", "Machine Learning Developer", "Software Developer"],
+        strings: ["Business Analyst", "Consultant", "Financial Analyst", "Accountant"],
         typeSpeed: 100,
         backSpeed: 20,
         loop: true
