@@ -1,0 +1,700 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px; /* distance to the left and right of the website*/
+    margin: auto;
+}
+
+/*Navbar styling*/
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.4s ease;
+    z-index: 999;
+}
+
+.navbar.sticky{
+    padding: 30px 0;
+    background:rgb(13, 158, 206);
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.4s ease;
+    display: block;
+}
+
+.navbar .menu li a:hover{
+    color:rgb(13, 158, 206);
+}
+
+.navbar.sticky .menu li a:hover {
+    color: rgba(0, 0, 0, 0.671);
+
+}
+
+/*Menu btn styling*/
+
+.menu-btn {
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 45px;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: rgb(13, 158, 206);
+    z-index: 999;
+    font-size: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 10px;
+}
+
+/*Home section styling*/
+
+.home {
+    display: flex;
+    /*background: url("images/background1.jpg") no-repeat center;*/
+    background: rgb(10, 10, 10);
+    height: 100vh; 
+    background-size: cover;
+    color: white;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 27px;
+}
+
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span{
+    color:rgb(13, 158, 206);
+    font-weight: 500;
+}
+
+.home .home-content a{
+    color: white;
+    background: rgb(13, 158, 206);
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 25px;
+    padding: 8px 20px;
+    margin-top: 20px;
+    border: 2px solid rgb(13, 158, 206);
+    transition: 0.4s ease;
+}
+
+.home .home-content a:hover{
+    background-color: transparent;
+    
+}
+
+/*Response media query start*/
+
+@media (max-width: 1300){ /*full screen*/
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px){ /*almost full screen*/
+    .about .about-content .left img{
+        height: 350px;
+        width: 270px;
+    }
+
+    .education .education-content .right img{
+        height: 250px;
+        width: 450px;
+    }
+}
+
+@media (max-width: 991px){ /*semi-large screen*/
+    .max-width{
+        padding: 0 50px;
+    }
+}
+
+
+@media (max-width: 947px){/*medium screen*/
+
+    .max-width{
+        padding: 0 50px;
+    }
+
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;  
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: 0.3s ease;
+    }
+
+    .navbar .menu.active{
+        left: 0; /*Change to -70% to cover only part of the screen*/
+
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+
+    .home .home-content a{
+        font-size: 22px;
+        padding: 6px 17px;
+    }
+
+    .max-width{
+        max-width: 800px;
+
+    }
+
+    .about .about-content .column{
+        width: 100%;
+    }
+
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right{
+        flex: 100%;
+    }
+
+    .education .education-content .column{
+        width: 100%;
+    }
+
+    .education .education-content .right{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .education .education-content .left{
+        flex: 100%;
+    }
+
+    .experience .exp-content .card, 
+    .contact .contact-content .column{
+        margin-bottom: 30px;
+        flex: 100%;
+    }
+
+    .skills .skills-content .column{
+        width: 100%;
+    }
+
+
+} /* inside media*/
+
+@media(max-width: 690px){ /*small screen*/
+    .max-width{
+        padding: 0 23px;
+    }
+    
+    .home .home-content .text-2{
+        font-size: 55px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+
+    .home .home-content a{
+        font-size: 19px;
+    }
+
+    .skills .skills-content .column{
+        flex: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 500px){ /*phone screen*/
+    .max-width{
+        padding: 0 23px;
+    }
+    
+    .home .home-content .text-1{
+        font-size: 22px;
+    }
+
+    .home .home-content .text-2{
+        font-size: 48px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 30px;
+    }
+    .home .home-content a{
+        font-size: 18px;
+        padding: 5px 15px;
+    }
+}
+
+/*All section styling code*/
+
+section{
+    padding: 100px 0;
+}
+
+.about, .education, .experience, .skills, .contact, footer{  /* All fonts listed here*/
+    font-family: 'Poppins',sans-serif;
+}
+
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about .about-content, .experience .exp-content, .skills, .skills-content, .contact, .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title:before{
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: black;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section .title:after{
+    position: absolute;
+    padding: 5px;
+    background: white;
+    bottom: -12px;;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(13, 158, 206);
+    transform: translateX(-50%);
+}
+
+/* About section styling*/
+.about .title:after{
+    content: "who I am";
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.about .about-content .right .typing-small{
+    color: rgb(13, 158, 206);
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+}
+
+.about .about-content .right a{
+    color: white;
+    background: rgb(13, 158, 206);
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 20;
+    font-weight: 500;
+    padding: 8px 20px;
+    margin-top: 20px;
+    border: 2px solid rgb(13, 158, 206);
+    transition: 0.4s ease;
+}
+
+.about .about-content .right a:hover{
+    background-color: transparent;
+    color: rgb(13, 158, 206);    
+}
+
+
+/*Education section styling*/
+.education{
+    background: rgb(10, 10, 10);
+    color: white;
+}
+.education .title:before{
+    background: white;
+}
+
+.education .title:after{
+    content: "where I learn";
+    background: rgb(10, 10, 10);
+}
+
+.education .education-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:  wrap-reverse;
+}
+
+.education .education-content .right{
+    width: 45%;
+}
+
+.education .education-content .right img{
+    height: 300px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.education .education-content .left{
+    width: 55%;
+}
+
+.education .educcation-content .left .text{
+    font-size: 25px;
+    font-size: 500;
+    margin-bottom: 10px;;
+}
+
+.education .education-content .left .text span{
+    color: rgb(13, 158, 206);
+    font-weight: 500;
+}
+.education .education-content .left p{
+    text-align: justify;
+}
+
+.education .education-content .left p span{
+    color:rgb(13, 158, 206);
+
+}
+
+/*Experience section*/
+
+.experience .title:after{
+    content: "what I do";
+    background: white;
+    color: rgb(13, 158, 206);
+}
+
+.experience{
+    background: white;
+    color: black;
+}
+
+.experience .exp-content .card{
+    width: calc(33% - 20px);
+    background: white;
+    text-align: center;
+    border: 2px solid rgb(13, 158, 206);
+    border-radius: 10px;
+    /*box-shadow: 5px 10px rgb(10, 10, 10);*/
+}
+
+.experience .exp-content .card i{
+    font-size: 50px;
+    color:rgb(13, 158, 206);
+
+}
+
+.experience .exp-content .card{
+    transition: all 0.5s ease;
+}
+
+.experience .exp-content .card:hover{
+    transform: scale(1.05);
+}
+
+.experience .exp-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 5px 7px 0px;
+
+}
+
+/*Skills section styling*/
+
+.skills{
+    background: rgb(10, 10, 10);
+    color: white;
+}
+
+.skills .title:before{
+    background: white;
+}
+.skills .title::after{
+    content: "what I know";
+    background: rgb(10, 10, 10);
+}
+
+.skills .skills-content .column{
+    width: calc(50% - 50px);
+}
+
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .right .bars{
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-content .bars .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+
+}
+
+.skills .skills-content .right .line:before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background:rgb(13, 158, 206);
+}
+
+.skills-content .right .python::before{
+    width: 90%;
+}
+
+.skills-content .right .R::before{
+    width: 80%;
+}
+
+.skills-content .right .MySQL::before{
+    width: 80%;
+}
+
+.skills-content .right .tableau::before{
+    width: 60%;
+}
+
+.skills-content .right .tensorflow::before{
+    width: 50%;
+}
+
+.skills-content .right .sas::before{
+    width: 50%;
+}
+
+.skills-content .right .sk-learn::before{
+    width: 80%;
+}
+
+.skills-content .right .html::before{
+    width: 90%;
+}
+
+.skills-content .right .css::before{
+    width: 80%;
+}
+
+.skills-content .right .javascript::before{
+    width: 60%;
+}
+
+/*Contact section styling*/
+
+.contact .title:after{
+    content: "reach out to me";
+}
+
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .left .text{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .left p{
+    text-align: justify;
+}
+
+.contact .contact-content .right .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i{
+    font-size: 25px;
+    color:rgb(13, 158, 206)
+}
+
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+
+.contact .contact-content .info .sub-title{
+    color: rgb(80, 80, 80);
+}
+
+.contact .contact-content .info .sub-title a{
+    color:rgb(80, 80, 80);    
+}
+.contact .contact-content .info .sub-title a:hover{
+    color:rgb(13, 158, 206);    
+}
+
+.contact .contact-content .info .sub-title a:visited{
+    color:purple; 
+}
+
+.contact .contact-content .left i{
+    color: rgb(13, 158, 206);
+    font-size: 25px;
+}
+
+/*Footer styling*/
+footer{
+    background: rgb(10, 10, 10);
+    padding: 20px 23px;
+    color: white;
+    text-align: center;
+}
+
+footer span a{
+    color: rgb(13, 158, 206);
+}
+
