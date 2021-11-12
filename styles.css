@@ -111,6 +111,8 @@ html {
     color: white;
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
+
+    /*remove this if there are problems*/
 }
 
 .home .max-width {
@@ -161,6 +163,88 @@ html {
 
 .home .home-content a:hover i{
     color: rgb(13, 158, 206);
+}
+
+
+.home .effect-wrap .effect-1{
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+    font-size: 50px;
+    animation: spin 10s linear infinite;
+}
+
+.home .effect-wrap .effect-2{
+    position: absolute;
+    color:rgb(13, 158, 206);
+    right: 30%;
+    top: 20%;
+    font-size: 50px;
+    animation: topBounce 3s ease-in-out infinite;
+}
+
+.home .effect-wrap .effect-3{
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    font-size: 50px;
+    animation: leftBounce 3s ease-in-out infinite;
+}
+
+.home .effect-wrap .effect-4{
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    font-size: 50px;
+    animation: spinOpp 10s linear infinite;
+}
+
+.home .effect-wrap .effect-5{
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    color: rgb(13, 158, 206);
+    font-size: 50px;
+    animation: topBounce 3s ease-in-out infinite;
+}
+
+/*Effect wrap animations*/
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinOpp{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes topBounce{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(25px);
+    }
+
+}
+
+@keyframes leftBounce{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(25px);
+    }
+
 }
 
 
