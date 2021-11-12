@@ -24,6 +24,14 @@ $(document).ready(function(){
         $('.menu-btn i').toggleClass("active");
     })
 
+
+    // Project buttons
+    $('.more-btn').on('click', function(){
+        $(this).parent().find('.more-text').toggleClass('active');
+    });
+
+    
+
     // backspace animation on homepage using script
     var typed = new Typed(".typing",{
         strings: ["Data Science Analyst", "Machine Learning Developer", "Software Developer"],
@@ -46,6 +54,9 @@ $(document).ready(function(){
         loop: true
     })
 
+    
+
 });
+
 
 
