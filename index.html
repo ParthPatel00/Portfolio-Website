@@ -15,6 +15,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
+    <!--<script>
+        document.querySelectorAll('project-button').forEach(button => {
+            button.addEventListener('click', () => {            
+                button.classList.toggle('project-button--active');
+            });
+        });
+    </script> -->
+
     
 
 </head>
@@ -107,12 +115,14 @@
             </div>
         </div>
 
+        
     </section>
 
     <!-- Experience section starts-->
     <section class="experience" id="experience">
         <div class="max-width">
             <h2 class="title">Experience</h2>
+            <h3 class="subtitle-courses">Courses</h3>
             <div class="exp-content">
                 <div class="card">
                     <div class="box">
@@ -140,10 +150,204 @@
                             responsive design, and twitter bootstrap.</p>
                     </div>
                 </div>
+            </div>
+
+
+            <h3 class="subtitle-project">Projects</h3>
+            <div class="project-content">
+                <div class="cards">
+                    <div class="card"> <!-- Card #1 -->
+                        <div class="img">
+                            <img src="Images/neighborhood.jpg" alt="">
+                        </div>
+                        <div class="text"> <h2>Neighborhood Business Classification Model</h2></div>
+                        <div class="more-btn">
+                            <i class="fas fa-building"></i>
+                        </div>
+
+                        <div class="more-text">
+                            <div style="padding: 10px 0">Built a K-means clustering algorithm using Pandas and Scikit-Learn to run on data scraped from 
+                                3+ webpages using Beautiful Soup, and querying through FourSquare APIs of all businesses for
+                                2100+ neighborhoods in Toronto.</div>
+                            <div style="padding: 10px 0">Created data visualizations by transforming 6 tables and visual frequency graphs revealing 
+                                clusters of neighborhoods with similar business environments using Tableau for effective 
+                                communication for the non-technical audience.
+                                </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <div class="card"> <!-- Card #2 -->
+                        <div class="img">
+                            <img src="Images/employee.jpg" alt="">
+                        </div>
+                        <div class="text"> <h2>Employee Payroll Management System</h2></div>
+                        <div class="more-btn">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="more-text">
+                            <div style="padding: 10px 0">Excercised object oriented programming (OOP) fundaments while creating employee, payroll, and management classes.
+                            </div>
+                            <div style="padding: 10px 0">Designed an effecient database framework on MySQl that stored employee payroll, check-in/check-out status and 
+                                employee work history within data size limitations.
+                            </div>
+                            <div style="padding: 10px 0">Wrote dozens of complex queries to communicate with MySQL database in Python.</div>
+                        </div>
+                    </div>
+                        
+                   
     
+    
+                    
+                    <div class="card"> <!-- Card #3 -->
+                        <div class="img">
+                            <img src="Images/digits.jpg" alt="">
+                        </div>
+                        <div class="text"> <h2>Number Recognition using Artificial Neural Network</h2></div>
+                        <div class="more-btn">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+    
+                        <div class="more-text">
+                            <div style="padding: 10px 0"> Created and cleaned +100 raw images of handwritten digits from 0-9 in Photoshop with distinct
+                                handwriting to ensure unbiasedness and versatility in data.</div>
+                            <div style="padding: 10px 0">Implemented and trained an artificial neural network model using Forward propagation and 
+                                Backward propagation in Octave with Regularized Gradient Descent on images for 
+                                classification, resulting in 95.7% testing accuracy
+                                </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- Card #4 -->
+                        <div class="img">
+                            <img src="Images/stitch.jpg" alt="">
+                        </div>
+                        <div class="text"> <h2>Cross-stitch Image Pattern Generator</h2></div>
+                        <div class="more-btn">
+                            <i class="fas fa-camera-retro"></i>
+                        </div>
+    
+                        <div class="more-text">
+                            <div style="padding: 10px 0">Collected raw, colorful image data as input for an implemented k-means 
+                                algorithm that clusters similar colors together to reduce or maintain image quality.</div>
+                            <div style="padding: 10px 0">Upon clustering, appropriate thread colors were chosen using DMC and a custom pattern
+                                 is created according to manual user selection.</div>
+                            <div style="padding: 10px 0">The cross-stitch pattern design of the provided image is displayed along with options to apply custom changes via user interface.</div>
+                            
+                            
+                            
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- Card #5 -->
+                        <div class="img">
+                            <img src="Images/lasso.jpg" alt="">
+                        </div>
+                        <div class="text"> <h2>Logistic Lasso Prediction Algorithm Implementation</h2></div>
+                        <div class="more-btn">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+    
+                        <div class="more-text">
+                            <div style="padding: 10px 0">Implemented a logistic lasso algorithm in R that takes can take numerical
+                                 relational database with a high capacity of feature variables and one predictor.</div>
+                            <div style="padding: 10px 0">The algorithm displayed accuracy difference less than 0.01% when competing with 
+                                the built in logistic lasso algorithm in R.</div>
+                            <div style="padding: 10px 0">Also made it available to tune lambda parameter that maximizes F1 score and accuracy,
+                                 resulting into providing the best predictions.</div>
+                            
+
+
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- Card #6 -->
+                        <div class="img">
+                            <img src="Images/books.jpg" alt="">
+                        </div>
+                        <div class="text"> <h2>Amazon Books Customer Review Classification</h2></div>
+                        <div class="more-btn">
+                            <i class="fas fa-book"></i>
+                        </div>
+    
+                        <div class="more-text">
+                            <div style="padding: 10px 0">Performed ETL process using SQL and Pandas on 11,000+ instances of unstructured eCommerce 
+                                data by extracting text-based key-value data from 5 JSON files, cleaning and transforming to 
+                                usable data for natural language processing technique, Bag-of-words.</div>
+                            <div style="padding: 10px 0">Developed and compared machine learning models such as SVM, Naïve Bayes, Decision Tree,
+                                and logistic regression using Scikit-Learn, with parameter and data tuning. Testing accuracy 
+                                with F1 Scores of 86-88% concluded logistic regression to have the most optimal results.
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                
+                    
+                
+                
+                
+                    <!--
+                    <div class="box">
+                        <i class="fas fa-building"></i>
+                        <div class="text">Neighborhood Business Classification Model</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perspiciatis hic saepe numquam sed? Explicabo nisi veritatis eius veniam eum quo velit cupiditate laboriosam exercitationem sunt dolor maiores, libero facere.</p>
+                    </div>
+                    -->
+
+                <!--
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-users"></i>
+                        <div class="text">Employee Payroll Management System</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perspiciatis hic saepe numquam sed? Explicabo nisi veritatis eius veniam eum quo velit cupiditate laboriosam exercitationem sunt dolor maiores, libero facere.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-network-wired"></i>
+                        <div class="text">Number Recognition using Artificial Neural Network</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perspiciatis hic saepe numquam sed? Explicabo nisi veritatis eius veniam eum quo velit cupiditate laboriosam exercitationem sunt dolor maiores, libero facere.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-camera-retro"></i>
+                        <div class="text">Cross-stitch Image Pattern Generator</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perspiciatis hic saepe numquam sed? Explicabo nisi veritatis eius veniam eum quo velit cupiditate laboriosam exercitationem sunt dolor maiores, libero facere.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-bullseye"></i>
+                        <div class="text">Logistic Lasso Prediction Algorithm Implementation</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perspiciatis hic saepe numquam sed? Explicabo nisi veritatis eius veniam eum quo velit cupiditate laboriosam exercitationem sunt dolor maiores, libero facere.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-book"></i>
+                        <div class="text">Amazon Books Customer Review Classification</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perspiciatis hic saepe numquam sed? Explicabo nisi veritatis eius veniam eum quo velit cupiditate laboriosam exercitationem sunt dolor maiores, libero facere.</p>
+                    </div>
+                </div>
+                -->
+                
+
+                
             </div>
         </div>
     </section>
+
+    
 
     <!-- Skills section start-->
     <section class="skills" id="skills">
